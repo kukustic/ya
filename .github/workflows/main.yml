@@ -18,13 +18,13 @@ jobs:
       run: echo "Запуск на ${{ matrix.os }}"
       
     - name: testing circle
-      run: python unittestcircle.py
+      run: python geometric_lib/unittestcircle.py
 
     - name: testing rectangle
-      run: python unittestrectangle.py
+      run: python  geometric_lib/unittestrectangle.py
 
     - name: testing square
-      run: python unittestsquare.py
+      run: python  geometric_lib/unittestsquare.py
 
     - name: testing triangle
-      run: python unittesttriangle.py
+      run: python  geometric_lib/unittesttriangle.py
