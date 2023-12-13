@@ -1,0 +1,30 @@
+name: Пример Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+    - name: Checkout репозитория
+      uses: actions/checkout@v2
+
+    - name: Запуск на ${{ matrix.os }}
+      run: echo "Запуск на ${{ matrix.os }}"
+      
+    - name: testing circle
+      run: python unittest_circle.py
+
+    - name: testing rectangle
+      run: python unittest_rectangle.py
+
+    - name: testing square
+      run: python unittest_square.py
+
+    - name: testing triangle
+      run: python unittest_triangle.py
